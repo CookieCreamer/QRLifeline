@@ -5,19 +5,19 @@
         <title>@ViewBag.Title - My ASP.NET MVC Application</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
-        @Styles.Render("~/Content/css")
+        @Styles.Render("~/Content/Site.css")
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
-        <header>
-            <div class="content-wrapper">
+        <header class="navigation">
+            <div class="content-wrapper header_container">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("QR Lifeline", "Index", "Home")</p>
+                    <section class="site-title"><img src="~/Images/header.png"/></section>
                 </div>
                 <div class="float-right">
-                    <section id="login">
+                    <!--<section id="login">
                         @Html.Partial("_LoginPartial")
-                    </section>
+                    </section>-->
                     <nav>
                         <ul id="menu">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
@@ -40,7 +40,10 @@
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - QR Lifeline</p>
+                    <p>Copyright &copy; @DateTime.Now.Year - QR Lifeline</p>
+                </div>
+                <div class="float-right">
+                    <section class="footer_logo"><img src="~/Images/footer_kraken.png"/></section>
                 </div>
             </div>
         </footer>

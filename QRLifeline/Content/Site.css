@@ -1,15 +1,26 @@
-﻿html {
+﻿@font-face {
+    font-family: 'open_sanslight';
+    src: url('fonts/OpenSans-Light-webfont.eot');
+    src: url('fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-Light-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html {
     background-color: #e2e2e2;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #fff;
-    border-top: solid 10px #000;
+    background-color: #f3f3f3;
     color: #333;
     font-size: .85em;
-    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    font-family: "open_sanslight", Verdana, Helvetica, Sans-Serif;
     margin: 0;
     padding: 0;
 }
@@ -31,8 +42,16 @@ a {
         background-color: #c7d1d6;
     }
 
-header, footer, hgroup,
+header{
+    display:block;
+}
+
+footer,
 nav, section {
+    display: block;
+}
+
+hgroup{
     display: block;
 }
 
@@ -99,13 +118,13 @@ h5, h6 {
 }
 
 #body {
-    background-color: #efeeef;
+    background-color: #f3f3f3;
     clear: both;
     padding-bottom: 35px;
 }
 
     .main-content {
-        background: url("../Images/accent.png") no-repeat;
+        background: #f3f3f3;
         padding-left: 10px;
         padding-top: 30px;
     }
@@ -115,14 +134,28 @@ h5, h6 {
     }
 
 header .content-wrapper {
-    padding-top: 20px; 
+    height:100px;
+    background:#fff;
+}
+
+.navigation{
+    background:#fff;
+    width:100%;
+    height:100px;
 }
 
 footer {
+    height: 56px;
+    width:100%;
+    position:fixed;
+    bottom:0px;
     clear: both;
-    background-color: #e2e2e2;
-    font-size: .8em;
-    height: 100px;
+    background:#fff;
+    font-size: 1em;
+}
+
+.footer_logo {
+    margin:-5px 0px 0px 0px;
 }
 
 
@@ -181,16 +214,27 @@ footer {
 ----------------------------------------------------------*/
 ul#menu {
     font-size: 1.3em;
-    font-weight: 600;
-    margin: 0 0 5px;
-    padding: 0;
+    margin: 0 0 0 0;
+    padding: 35px 0px 38px 0px;
     text-align: right;
+    border-bottom:3px solid #fff;
 }
 
     ul#menu li {
         display: inline;
         list-style: none;
-        padding-left: 15px;
+        padding:35px 10px 38px 10px;
+        height:62px;
+        border-bottom:3px solid #fff;
+    }
+
+    ul#menu li:hover {
+        display: inline;
+        list-style: none;
+        padding:35px 10px 38px 10px;
+        color:#C12026;
+        background:#e7e7e7;
+        border-bottom:3px solid #C12026;
     }
 
         ul#menu li a {
@@ -200,7 +244,7 @@ ul#menu {
         }
 
         ul#menu li a:hover {
-            color: #333;
+            color: #C12026;
             text-decoration: none;
         }
 
